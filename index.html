@@ -1,49 +1,43 @@
 <!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
 <html>
     <head>
-        <title>Dynamic Content</title>
+        <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-        <style> 
-            #outer {
-            position: absolute;
-            top: 45%;
-            left: 45%;
-            background-color: wheat;
-            width: 10%;
-            height: 10%;
-}           #inner{
-          top: 45%;
-          left: 45;
-          clear: both;
-          vertical-align: middle;
-          text-align: center;
-          background-color: black;
-          color: aqua;
-}
-        </style>
-    </head>
-    <body>
-        <div id="outer">
-            <span id="inner">
-            <a style="color:wheat;" href="http://www.Selamin Aleykum.com" target="_blank">Selamin Aleykum</a>
-            </span>
-        </div>
         <script>
-            $('#inner').hover (
-                function(){
-                    $(this).cas("background-color","red");
-                },
-                function(){
-                    $(this).cas("background-color","yellow");
-                }
-                );
-        $('inner').click( 
-            function(){
-                window.location="http://www.gsstore.de";
+            function factorial (num){
+                var res= 1;
+                for(var i=2; i<=num; i++)
+                    res = res* i;
+                
+                return res;
             }
-        );
-        </script>
-                        </body>
+                
+            function calculate() {
+                var innum =$('#num').val();
+                var res = factorial(innum);
+                $('#res').val(res);
+            
+        return res ;
+    }
+            
+        </script> 
+    </head>
+     <body>
+         <div>
+             <form>
+                 <input type="text" id="num" value="10"/>
+                 <input type="text" id="res" placeholder="here goes the result"/>
+                 <input type="button" 
+                 <input type="submit" id="onclick" 
+             </form>
+         </div>
+
+</body>
 </html>
